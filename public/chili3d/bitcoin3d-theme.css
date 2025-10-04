@@ -1,0 +1,127 @@
+/* Bitcoin 3D Hot Pink Theme Override */
+:root {
+  --primary-color: #ff1493 !important;
+  --secondary-color: #ff69b4 !important;
+  --accent-color: #ff1493 !important;
+  --background-color: #2d0a1f !important;
+  --control-background-color: #1a0512 !important;
+  --border-color: #ff1493 !important;
+  --hover-background-color: #ff1493 !important;
+  --foreground-color: #ff69b4 !important;
+  --text-color: #ff69b4 !important;
+}
+
+/* Override body and main container */
+body {
+  background-color: #2d0a1f !important;
+  color: #ff69b4 !important;
+}
+
+/* Toolbar and UI elements */
+.toolbar, .panel, .menu, .ribbon, .tab-panel, .control-panel {
+  background-color: #2d0a1f !important;
+  border-color: #ff1493 !important;
+  color: #ff69b4 !important;
+}
+
+/* Buttons */
+.button, .btn, button, .tab, .menu-item, input[type="button"], input[type="submit"] {
+  background-color: transparent !important;
+  color: #ff69b4 !important;
+  border: 1px solid #ff1493 !important;
+  transition: all 0.2s ease !important;
+}
+
+.button:hover, .btn:hover, button:hover, .tab:hover, .menu-item:hover,
+input[type="button"]:hover, input[type="submit"]:hover {
+  background-color: #ff1493 !important;
+  color: #ffffff !important;
+  border-color: #ff69b4 !important;
+}
+
+/* Input fields */
+input, textarea, select {
+  background-color: #1a0512 !important;
+  color: #ff69b4 !important;
+  border: 1px solid #ff1493 !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #ff69b4 !important;
+  box-shadow: 0 0 0 2px rgba(255, 20, 147, 0.2) !important;
+}
+
+/* Dialog and modal backgrounds */
+.dialog, .modal, .popup, .tooltip {
+  background-color: #2d0a1f !important;
+  border: 1px solid #ff1493 !important;
+  color: #ff69b4 !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #1a0512 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff1493 !important;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ff69b4 !important;
+}
+
+/* Tree view and list items */
+.tree-item, .list-item, li {
+  color: #ff69b4 !important;
+}
+
+.tree-item:hover, .list-item:hover, li:hover {
+  background-color: rgba(255, 20, 147, 0.1) !important;
+}
+
+.tree-item.selected, .list-item.selected, li.selected {
+  background-color: #ff1493 !important;
+  color: #ffffff !important;
+}
+
+/* Splitter and resize handles */
+.splitter, .resize-handle {
+  background-color: #ff1493 !important;
+}
+
+/* Status bar */
+.status-bar, .footer {
+  background-color: #1a0512 !important;
+  border-top: 1px solid #ff1493 !important;
+  color: #ff69b4 !important;
+}
+
+/* 3D viewport background */
+canvas {
+  background-color: #000000 !important;
+}
+
+/* Override any existing gradients */
+.gradient, .toolbar-gradient {
+  background: linear-gradient(135deg, #2d0a1f 0%, #1a0512 100%) !important;
+}
+
+/* Text and labels */
+h1, h2, h3, h4, h5, h6, p, span, label {
+  color: #ff69b4 !important;
+}
+
+/* Active states */
+.active, .current, .selected {
+  background-color: #ff1493 !important;
+  color: #ffffff !important;
+}
+
+/* Disabled states */
+.disabled, [disabled] {
+  opacity: 0.5 !important;
+  color: rgba(255, 105, 180, 0.5) !important;
+}

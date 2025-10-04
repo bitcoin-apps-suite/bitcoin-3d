@@ -2,6 +2,7 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
 import Dock from '../../components/Dock';
+import Bitcoin3DEditor from '@/components/Bitcoin3DEditor';
 
 export default function HomePage() {
   const handleIframeLoad = () => {
@@ -42,25 +43,7 @@ export default function HomePage() {
             background: '#000',
             position: 'relative'
           }}>
-            <iframe
-              src="https://chili3d.pages.dev/#newdocument"
-              width="100%"
-              height="100%"
-              onLoad={handleIframeLoad}
-              style={{
-                border: 'none',
-                display: 'block',
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                filter: 'contrast(1.1) saturate(1.2)'
-              }}
-              title="Bitcoin 3D - Professional 3D Modeling & Design"
-              allowFullScreen
-              sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-pointer-lock allow-downloads"
-            />
+            <Bitcoin3DEditor />
           </div>
         </div>
       </div>
