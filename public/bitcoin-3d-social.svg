@@ -1,0 +1,57 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bitcoinGradientBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d0a1f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a0512;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bitcoinGradientCube" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff1493;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff69b4;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bitcoinGradientBg)"/>
+  
+  <!-- Main content centered -->
+  <g transform="translate(600, 315)">
+    <!-- 3D cube - larger for social media -->
+    <g transform="translate(-120, -80) scale(10)">
+      <!-- Top face -->
+      <path d="M0 8 L12 2 L24 8 L12 14 Z" fill="url(#bitcoinGradientCube)" opacity="0.9" filter="url(#glow)"/>
+      
+      <!-- Left face -->
+      <path d="M0 8 L12 14 L12 26 L0 20 Z" fill="#ff1493" opacity="0.8"/>
+      
+      <!-- Right face -->
+      <path d="M12 14 L24 8 L24 20 L12 26 Z" fill="#ff69b4" opacity="0.9"/>
+      
+      <!-- Bitcoin B symbol -->
+      <g transform="translate(8, 12)" fill="white">
+        <path d="M0 0 L0 8 M0 1 L4 1 Q5 1 5 2.5 Q5 4 4 4 L0 4 M0 4 L5 4 Q6 4 6 5.5 Q6 7 5 7 L0 7" 
+              stroke="white" stroke-width="1.5" fill="none"/>
+        <circle cx="2" cy="2.5" r="0.8" fill="white"/>
+        <circle cx="2.5" cy="5.5" r="0.8" fill="white"/>
+      </g>
+    </g>
+    
+    <!-- Title text -->
+    <text x="0" y="120" font-family="Arial, sans-serif" font-size="72" font-weight="bold" 
+          fill="#ff1493" text-anchor="middle" filter="url(#glow)">Bitcoin 3D</text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="170" font-family="Arial, sans-serif" font-size="32" 
+          fill="#ff69b4" text-anchor="middle">Professional 3D Modeling & Design</text>
+    
+    <!-- Website -->
+    <text x="0" y="210" font-family="Arial, sans-serif" font-size="24" 
+          fill="#ff69b4" text-anchor="middle" opacity="0.8">bitcoin-3d.vercel.app</text>
+  </g>
+</svg>

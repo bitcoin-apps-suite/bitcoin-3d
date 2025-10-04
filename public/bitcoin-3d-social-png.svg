@@ -1,0 +1,102 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bitcoinGradientBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d0a1f;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1a0512;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d0208;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bitcoinGradientCube" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff1493;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff69b4;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="glowGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ff1493;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#ff1493;stop-opacity:0" />
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+    <filter id="textGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bitcoinGradientBg)"/>
+  
+  <!-- Background glow effect -->
+  <circle cx="600" cy="315" r="400" fill="url(#glowGradient)" opacity="0.3"/>
+  
+  <!-- Main content centered -->
+  <g transform="translate(600, 315)">
+    <!-- 3D cube - much larger and more detailed for social media -->
+    <g transform="translate(-150, -100) scale(12)">
+      <!-- Shadow -->
+      <path d="M2 24 L14 30 L26 24 L26 12 L14 18 Z" fill="#000000" opacity="0.2"/>
+      
+      <!-- Top face -->
+      <path d="M0 8 L12 2 L24 8 L12 14 Z" fill="url(#bitcoinGradientCube)" opacity="0.95" filter="url(#glow)"/>
+      
+      <!-- Left face -->
+      <path d="M0 8 L12 14 L12 26 L0 20 Z" fill="#c41e3a" opacity="0.85"/>
+      
+      <!-- Right face -->
+      <path d="M12 14 L24 8 L24 20 L12 26 Z" fill="#ff69b4" opacity="0.9"/>
+      
+      <!-- Bitcoin B symbol - enhanced -->
+      <g transform="translate(7, 11)" fill="white">
+        <!-- B letter strokes -->
+        <rect x="0" y="0" width="2" height="12" fill="white"/>
+        <rect x="0" y="0" width="6" height="2" rx="1" fill="white"/>
+        <rect x="0" y="5" width="7" height="2" rx="1" fill="white"/>
+        <rect x="0" y="10" width="6" height="2" rx="1" fill="white"/>
+        
+        <!-- Right curves -->
+        <circle cx="7" cy="3" r="1.5" fill="white"/>
+        <circle cx="8" cy="8.5" r="1.5" fill="white"/>
+        
+        <!-- Inner details -->
+        <circle cx="6" cy="3" r="0.5" fill="#ff1493"/>
+        <circle cx="7" cy="8.5" r="0.5" fill="#ff1493"/>
+      </g>
+      
+      <!-- Edge highlights for 3D effect -->
+      <path d="M0 8 L12 2 L12 14 L0 20 Z" fill="none" stroke="#ff1493" stroke-width="0.5" opacity="0.6"/>
+      <path d="M12 2 L24 8 L24 20 L12 14 Z" fill="none" stroke="#ff69b4" stroke-width="0.5" opacity="0.6"/>
+    </g>
+    
+    <!-- Title text with enhanced styling -->
+    <text x="0" y="150" font-family="Arial Black, Arial, sans-serif" font-size="84" font-weight="900" 
+          fill="#ff1493" text-anchor="middle" filter="url(#textGlow)">Bitcoin 3D</text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="200" font-family="Arial, sans-serif" font-size="36" font-weight="600"
+          fill="#ff69b4" text-anchor="middle">Professional 3D Modeling & Design</text>
+    
+    <!-- Feature highlights -->
+    <g transform="translate(0, 240)">
+      <text x="-200" y="0" font-family="Arial, sans-serif" font-size="24" 
+            fill="#ff69b4" text-anchor="middle">🔧 Web-based CAD</text>
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="24" 
+            fill="#ff69b4" text-anchor="middle">⚡ Self-hosted</text>
+      <text x="200" y="0" font-family="Arial, sans-serif" font-size="24" 
+            fill="#ff69b4" text-anchor="middle">🎨 Hot Pink Theme</text>
+    </g>
+    
+    <!-- Website URL with subtle styling -->
+    <text x="0" y="290" font-family="Arial, sans-serif" font-size="20" font-weight="300"
+          fill="#ff69b4" text-anchor="middle" opacity="0.8">bitcoin-3d.vercel.app</text>
+  </g>
+  
+  <!-- Corner accents -->
+  <circle cx="100" cy="100" r="50" fill="#ff1493" opacity="0.1"/>
+  <circle cx="1100" cy="530" r="60" fill="#ff69b4" opacity="0.1"/>
+</svg>

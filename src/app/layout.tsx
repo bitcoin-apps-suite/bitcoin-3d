@@ -17,33 +17,38 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bitcoin App - Boilerplate Template",
-  description: "Bitcoin SV application template with exchange, contracts, and ecosystem integration",
+  title: "Bitcoin 3D - Professional 3D Modeling & Design",
+  description: "Create, design, and model 3D objects with Bitcoin 3D - the premier web-based 3D CAD application for the Bitcoin ecosystem",
+  metadataBase: new URL('https://bitcoin-3d.vercel.app'),
   icons: {
     icon: [
+      { url: "/bitcoin-3d-logo.svg", type: "image/svg+xml" },
       { url: "/favicon.ico", type: "image/x-icon" },
     ],
   },
   openGraph: {
-    title: "Bitcoin App - Boilerplate Template",
-    description: "Bitcoin SV application template with exchange, contracts, and ecosystem integration",
-    siteName: "Bitcoin App",
+    title: "Bitcoin 3D - Professional 3D Modeling & Design",
+    description: "Create, design, and model 3D objects with Bitcoin 3D - the premier web-based 3D CAD application for the Bitcoin ecosystem",
+    siteName: "Bitcoin 3D",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/bitcoin-3d-social-png.svg",
         width: 1200,
         height: 630,
-        alt: "Bitcoin App - BSV Application Template",
+        alt: "Bitcoin 3D - Professional 3D Modeling & Design with hot pink Bitcoin cube logo",
       },
     ],
     locale: "en_US",
     type: "website",
+    url: "https://bitcoin-3d.vercel.app",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bitcoin App - Boilerplate Template",
-    description: "Bitcoin SV application template with exchange, contracts, and ecosystem integration",
-    images: ["/og-image.jpg"],
+    title: "Bitcoin 3D - Professional 3D Modeling & Design",
+    description: "Create, design, and model 3D objects with Bitcoin 3D - the premier web-based 3D CAD application for the Bitcoin ecosystem",
+    images: ["/bitcoin-3d-social-png.svg"],
+    creator: "@bitcoin3d",
+    site: "@bitcoin3d",
   },
 };
 
