@@ -15,7 +15,6 @@ export default function Bitcoin3DEditor() {
           style="border: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
           title="Bitcoin 3D - Professional 3D Modeling & Design"
           allowfullscreen
-          sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-pointer-lock allow-downloads"
         ></iframe>
       `;
       
