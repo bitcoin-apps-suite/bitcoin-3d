@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { ExternalLink, Box, Cube, TrendingUp, Users, Clock } from 'lucide-react';
+import { ExternalLink, Box, TrendingUp, Users, Clock } from 'lucide-react';
 import Dock from '../../components/Dock';
 
 export default function HomePage() {
@@ -252,7 +252,7 @@ export default function HomePage() {
                 alignItems: 'center',
                 gap: '0.5rem'
               }}>
-                <Cube size={20} />
+                <Box size={20} />
                 3D Objects Marketplace
               </h2>
               
