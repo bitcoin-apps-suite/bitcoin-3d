@@ -13,7 +13,7 @@ export default function BitcoinOSWrapper({ children }: BitcoinOSWrapperProps) {
 
   return (
     <>
-      {!isInOS && <PocBar color="#00ff88" />}
+      {!isInOS && <PocBar color="#ff1493" />}
       <div style={{ paddingTop: isInOS ? '0px' : '40px' }}>
         {children}
       </div>

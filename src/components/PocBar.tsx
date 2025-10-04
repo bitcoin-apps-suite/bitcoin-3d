@@ -7,7 +7,7 @@ interface PocBarProps {
   color?: string;
 }
 
-export default function PocBar({ color = '#00cc66' }: PocBarProps) {
+export default function PocBar({ color = '#ff1493' }: PocBarProps) {
   return (
     <div 
       className="poc-banner"

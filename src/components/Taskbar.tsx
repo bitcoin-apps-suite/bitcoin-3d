@@ -34,12 +34,12 @@ export default function Taskbar() {
 
   const menus: DropdownMenu[] = [
     {
-      label: 'Bitcoin App',
+      label: 'Bitcoin 3D',
       items: [
         { label: 'Home', shortcut: '⌘H', action: () => window.location.href = '/' },
         { divider: true },
-        { label: 'About Bitcoin App', action: () => alert(
-          'Bitcoin App v1.0.0\n\n' +
+        { label: 'About Bitcoin 3D', action: () => alert(
+          'Bitcoin 3D v1.0.0\n\n' +
           'Bitcoin SV Application Template\n\n' +
           '© 2025 Your Company Name\n\n' +
           'Built with:\n' +
@@ -103,7 +103,7 @@ export default function Taskbar() {
       label: 'Help',
       items: [
         { label: 'Getting Started', shortcut: '⌘?', action: () => alert(
-          'Bitcoin App Help\n\n' +
+          'Bitcoin 3D Help\n\n' +
           'Quick Start:\n' +
           '1. Fork this repository\n' +
           '2. Customize the app name and branding\n' +
@@ -144,7 +144,7 @@ export default function Taskbar() {
     { name: 'Bitcoin Video', color: '#65a30d', url: '#' },
     { name: 'Bitcoin Wallet', color: '#f59e0b', url: '#' },
     { name: 'Bitcoin Writer', color: '#ff9500', url: 'https://bitcoin-writer.vercel.app' },
-    { name: 'Your App', color: '#00ff88', url: '/', current: true }
+    { name: 'Your App', color: '#ff1493', url: '/', current: true }
   ]
 
   useEffect(() => {
@@ -173,8 +173,8 @@ export default function Taskbar() {
         alignItems: 'center',
         justifyContent: 'space-between',
         height: '28px',
-        background: 'linear-gradient(180deg, rgba(0, 40, 15, 0.95) 0%, rgba(0, 30, 10, 0.95) 100%)',
-        borderBottom: '1px solid rgba(0, 255, 136, 0.2)',
+        background: 'linear-gradient(180deg, rgba(60, 60, 60, 0.95) 0%, rgba(40, 40, 40, 0.95) 100%)',
+        borderBottom: '1px solid rgba(255, 20, 147, 0.2)',
         fontSize: '13px',
         fontWeight: '500',
         color: '#ffffff',
@@ -189,7 +189,7 @@ export default function Taskbar() {
           padding: '0 12px',
           fontSize: '18px',
           fontWeight: 'bold',
-          color: '#00ff88'
+          color: '#ff1493'
         }}>
           ₿
         </div>
@@ -208,7 +208,7 @@ export default function Taskbar() {
               padding: '0 12px',
               fontSize: '18px',
               fontWeight: 'bold',
-              color: '#00ff88',
+              color: '#ff1493',
               display: 'flex',
               alignItems: 'center',
               height: '28px',
@@ -240,12 +240,12 @@ export default function Taskbar() {
             <div style={{
               padding: '8px 16px',
               fontSize: '12px',
-              color: '#00ff88',
+              color: '#ff1493',
               fontWeight: '600',
               borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
               marginBottom: '4px'
             }}>
-              Bitcoin Apps
+              Bitcoin 3D
             </div>
             
             {bitcoinApps.map((app) => (
@@ -422,7 +422,7 @@ export default function Taskbar() {
         style={{ 
           fontSize: '14px',
           fontWeight: '600',
-          color: '#00ff88',
+          color: '#ff1493',
           background: 'transparent',
           border: 'none',
           cursor: 'pointer',
@@ -430,7 +430,7 @@ export default function Taskbar() {
         }}
         title="Return to home"
       >
-        Bitcoin App
+        Bitcoin 3D
       </button>
 
       {/* Mobile Menu Button */}
@@ -463,7 +463,7 @@ export default function Taskbar() {
         <button
           onClick={() => window.location.href = '/token'}
           style={{
-            background: 'linear-gradient(90deg, #00ff88, #00cc66)',
+            background: 'linear-gradient(90deg, #ff1493, #ff69b4)',
             color: '#000',
             border: 'none',
             padding: '4px 12px',
