@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import { useSession, signOut } from 'next-auth/react'
 import { Menu, X } from 'lucide-react'
 
 interface DropdownItem {
@@ -19,7 +18,7 @@ interface DropdownMenu {
 }
 
 export default function Taskbar() {
-  const { data: session } = useSession()
+  const session = null // Removed NextAuth for now
   const [activeMenu, setActiveMenu] = useState<string | null>(null)
   const [showBitcoinSuite, setShowBitcoinSuite] = useState(false)
   const [showMobileMenu, setShowMobileMenu] = useState(false)
@@ -55,7 +54,7 @@ export default function Taskbar() {
         { divider: true },
         { label: 'Preferences...', shortcut: '⌘,', action: () => console.log('Preferences') },
         { divider: true },
-        { label: session ? 'Sign Out' : 'Sign In', shortcut: '⌘Q', action: session ? () => signOut() : () => document.querySelector<HTMLButtonElement>('[data-signin]')?.click() }
+        { label: 'Sign In', shortcut: '⌘Q', action: () => console.log('Sign in clicked') }
       ]
     },
     {

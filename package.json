@@ -24,7 +24,6 @@
   "author": "Your App Name",
   "license": "Open BSV License Version 5",
   "dependencies": {
-    "@auth/prisma-adapter": "^2.10.0",
     "@bsv/sdk": "^1.7.6",
     "@handcash/handcash-connect": "^0.8.11",
     "@handcash/handcash-sdk": "^0.0.4",

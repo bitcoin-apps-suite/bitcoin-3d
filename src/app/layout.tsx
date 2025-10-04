@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Providers from "@/components/Providers";
 import PocBar from "@/components/PocBar";
 import DevLayout from "@/components/DevLayout";
 import Footer from "@/components/Footer";
@@ -59,16 +58,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Providers>
-          <BitcoinOSWrapper>
-            <DevLayout>
-              <div style={{ minHeight: 'calc(100vh - 32px)', display: 'flex', flexDirection: 'column' }}>
-                {children}
-                <Footer />
-              </div>
-            </DevLayout>
-          </BitcoinOSWrapper>
-        </Providers>
+        <BitcoinOSWrapper>
+          <DevLayout>
+            <div style={{ minHeight: 'calc(100vh - 32px)', display: 'flex', flexDirection: 'column' }}>
+              {children}
+              <Footer />
+            </div>
+          </DevLayout>
+        </BitcoinOSWrapper>
       </body>
     </html>
   );
