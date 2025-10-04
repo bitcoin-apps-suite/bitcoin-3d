@@ -58,6 +58,97 @@ export default function Taskbar() {
       ]
     },
     {
+      label: 'File',
+      items: [
+        { label: 'New Model', shortcut: '⌘N', action: () => console.log('New Model') },
+        { label: 'Open...', shortcut: '⌘O', action: () => console.log('Open') },
+        { label: 'Save', shortcut: '⌘S', action: () => console.log('Save') },
+        { label: 'Save As...', shortcut: '⇧⌘S', action: () => console.log('Save As') },
+        { divider: true },
+        { label: 'Import...', action: () => console.log('Import') },
+        { label: 'Export...', action: () => console.log('Export') }
+      ]
+    },
+    {
+      label: 'Edit',
+      items: [
+        { label: 'Undo', shortcut: '⌘Z', action: () => console.log('Undo') },
+        { label: 'Redo', shortcut: '⇧⌘Z', action: () => console.log('Redo') },
+        { divider: true },
+        { label: 'Cut', shortcut: '⌘X', action: () => console.log('Cut') },
+        { label: 'Copy', shortcut: '⌘C', action: () => console.log('Copy') },
+        { label: 'Paste', shortcut: '⌘V', action: () => console.log('Paste') },
+        { divider: true },
+        { label: 'Select All', shortcut: '⌘A', action: () => console.log('Select All') }
+      ]
+    },
+    {
+      label: 'View',
+      items: [
+        { label: 'Zoom In', shortcut: '⌘+', action: () => console.log('Zoom In') },
+        { label: 'Zoom Out', shortcut: '⌘-', action: () => console.log('Zoom Out') },
+        { label: 'Fit to Window', shortcut: '⌘0', action: () => console.log('Fit to Window') },
+        { divider: true },
+        { label: 'Wireframe', action: () => console.log('Wireframe') },
+        { label: 'Solid', action: () => console.log('Solid') },
+        { label: 'Textured', action: () => console.log('Textured') }
+      ]
+    },
+    {
+      label: '3D',
+      items: [
+        { label: 'Rotate', shortcut: 'R', action: () => console.log('Rotate') },
+        { label: 'Scale', shortcut: 'S', action: () => console.log('Scale') },
+        { label: 'Move', shortcut: 'G', action: () => console.log('Move') },
+        { divider: true },
+        { label: 'Add Cube', action: () => console.log('Add Cube') },
+        { label: 'Add Sphere', action: () => console.log('Add Sphere') },
+        { label: 'Add Cylinder', action: () => console.log('Add Cylinder') }
+      ]
+    },
+    {
+      label: 'Model',
+      items: [
+        { label: 'Extrude', action: () => console.log('Extrude') },
+        { label: 'Inset', action: () => console.log('Inset') },
+        { label: 'Bevel', action: () => console.log('Bevel') },
+        { divider: true },
+        { label: 'Mirror', action: () => console.log('Mirror') },
+        { label: 'Array', action: () => console.log('Array') },
+        { label: 'Subdivide', action: () => console.log('Subdivide') }
+      ]
+    },
+    {
+      label: 'Tools',
+      items: [
+        { label: 'Measure', action: () => console.log('Measure') },
+        { label: 'Snap Settings', action: () => console.log('Snap Settings') },
+        { label: 'Grid Settings', action: () => console.log('Grid Settings') },
+        { divider: true },
+        { label: 'Preferences', action: () => console.log('Preferences') }
+      ]
+    },
+    {
+      label: 'Share',
+      items: [
+        { label: 'Export as STL', action: () => console.log('Export STL') },
+        { label: 'Export as OBJ', action: () => console.log('Export OBJ') },
+        { label: 'Export as FBX', action: () => console.log('Export FBX') },
+        { divider: true },
+        { label: 'Mint as NFT', action: () => window.location.href = '/exchange' },
+        { label: 'Share Link', action: () => console.log('Share Link') }
+      ]
+    },
+    {
+      label: 'Window',
+      items: [
+        { label: 'Minimize', shortcut: '⌘M', action: () => console.log('Minimize') },
+        { label: 'Full Screen', shortcut: '⌘F', action: () => window.open('https://chili3d.pages.dev', '_blank') },
+        { divider: true },
+        { label: 'Reset Layout', action: () => console.log('Reset Layout') }
+      ]
+    },
+    {
       label: 'Exchange',
       items: [
         { label: 'Open Exchange', shortcut: '⌘E', action: handleOpenExchange },
