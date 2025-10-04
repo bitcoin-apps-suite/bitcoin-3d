@@ -1,9 +1,9 @@
 {
-  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
   "/_not-found/page": "app/_not-found/page.js",
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
   "/page": "app/page.js",
-  "/docs/page": "app/docs/page.js",
   "/exchange/page": "app/exchange/page.js",
   "/token/page": "app/token/page.js",
-  "/contracts/page": "app/contracts/page.js"
+  "/contracts/page": "app/contracts/page.js",
+  "/docs/page": "app/docs/page.js"
 }

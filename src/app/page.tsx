@@ -39,7 +39,7 @@ export default function HomePage() {
           <div style={{
             flex: 1,
             width: '100%',
-            minHeight: 'calc(100vh - 160px)', // Account for header and dock
+            minHeight: 'calc(100vh - 100px)', // Account for dock only
             background: '#000',
             position: 'relative'
           }}>
