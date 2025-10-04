@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import Link from 'next/link';
 import { TrendingUp, FileText, DollarSign, Github, ExternalLink, Box } from 'lucide-react';

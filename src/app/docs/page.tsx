@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { BookOpen, Code, Zap, FileText, ExternalLink } from 'lucide-react';
 

@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { FileText, Code, Play, Eye, Plus, Settings, Zap, Shield } from 'lucide-react';
 
