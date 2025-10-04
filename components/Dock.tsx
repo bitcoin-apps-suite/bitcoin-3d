@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { Wallet, Mail, Music, FileText, HardDrive, Calendar, Search, Table, Share2, Briefcase, Store, Wifi, Volume2, Battery, Clock, TrendingUp, Building2, Shield, Palette, GraduationCap, Paintbrush, Video } from 'lucide-react';
+import { Wallet, Mail, Music, FileText, HardDrive, Calendar, Search, Table, Share2, Briefcase, Store, Wifi, Volume2, Battery, Clock, TrendingUp, Box, Shield, Palette, GraduationCap, Paintbrush, Video } from 'lucide-react';
 import './Dock.css';
 
 interface DockApp {
@@ -67,7 +67,7 @@ const Dock: React.FC = () => {
     { name: 'Bitcoin Education', icon: GraduationCap, color: 'text-indigo-500', url: 'https://bitcoin-education-theta.vercel.app/' },
     { name: 'Bitcoin Paint', icon: Paintbrush, color: 'text-amber-500', url: 'https://bitcoin-paint.vercel.app' },
     { name: 'Bitcoin Video', icon: Video, color: 'text-violet-500', url: 'https://bitcoin-video-nine.vercel.app/' },
-    { name: 'Your Bitcoin App', icon: Building2, color: 'text-green-500', url: '/', current: true },
+    { name: 'Bitcoin 3D', icon: Box, color: 'text-pink-500', url: '/', current: true },
   ];
 
   const handleAppClick = (app: DockApp) => {

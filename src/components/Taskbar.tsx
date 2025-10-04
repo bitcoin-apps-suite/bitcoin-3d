@@ -144,7 +144,7 @@ export default function Taskbar() {
     { name: 'Bitcoin Video', color: '#65a30d', url: '#' },
     { name: 'Bitcoin Wallet', color: '#f59e0b', url: '#' },
     { name: 'Bitcoin Writer', color: '#ff9500', url: 'https://bitcoin-writer.vercel.app' },
-    { name: 'Your App', color: '#ff1493', url: '/', current: true }
+    { name: 'Bitcoin 3D', color: '#ff1493', url: '/', current: true }
   ]
 
   useEffect(() => {
