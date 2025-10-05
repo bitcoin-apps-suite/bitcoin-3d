@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: "Bitcoin 3D",
     images: [
       {
-        url: "/bitcoin-3d-social-png.svg",
+        url: "/bitcoin-3d-social-png.svg?v=2025",
         width: 1200,
         height: 630,
         alt: "Bitcoin 3D - Professional 3D Modeling & Design with hot pink Bitcoin cube logo",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Bitcoin 3D - Professional 3D Modeling & Design",
     description: "Create, design, and model 3D objects with Bitcoin 3D - the premier web-based 3D CAD application for the Bitcoin ecosystem",
-    images: ["/bitcoin-3d-social-png.svg"],
+    images: ["/bitcoin-3d-social-png.svg?v=2025"],
     creator: "@bitcoin3d",
     site: "@bitcoin3d",
   },
