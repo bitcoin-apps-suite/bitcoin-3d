@@ -1,0 +1,363 @@
+/* Docs Page - Bitcoin 3D Hot Pink Theme */
+.docs-page {
+  background: #0a0a0a;
+  color: #ffffff;
+  min-height: 100vh;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  padding-top: 96px; /* 40px POC banner + 32px taskbar + 24px spacing */
+  font-weight: 300;
+  transition: margin-left 0.3s ease;
+}
+
+/* Adjust for DevSidebar on desktop */
+@media (min-width: 769px) {
+  .docs-page.with-sidebar-expanded {
+    margin-left: 260px;
+  }
+  
+  .docs-page.with-sidebar-collapsed {
+    margin-left: 60px;
+  }
+}
+
+.docs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Adjust container width when sidebar is present */
+@media (min-width: 769px) {
+  .docs-page.with-sidebar-expanded .docs-container {
+    max-width: calc(100vw - 260px - 80px);
+  }
+  
+  .docs-page.with-sidebar-collapsed .docs-container {
+    max-width: calc(100vw - 60px - 80px);
+  }
+}
+
+@media (min-width: 1440px) {
+  .docs-page.with-sidebar-expanded .docs-container {
+    max-width: min(1200px, calc(100vw - 260px - 160px));
+  }
+  
+  .docs-page.with-sidebar-collapsed .docs-container {
+    max-width: min(1200px, calc(100vw - 60px - 160px));
+  }
+}
+
+/* Docs Hero - Full Width Black */
+.docs-hero {
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px 40px;
+  text-align: center;
+  margin-bottom: 40px;
+  background: #000000;
+  /* Full viewport width - properly centered */
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  margin-top: -24px;
+  width: 100vw;
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+.docs-hero h1 {
+  font-size: 42px;
+  font-weight: 200;
+  margin: 0 0 16px 0;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  background: linear-gradient(90deg, #ff1493, #ff69b4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.docs-tagline {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+.docs-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: linear-gradient(90deg, #ff1493, #ff69b4);
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  color: #000;
+}
+
+/* Sections - Compact */
+section {
+  padding: 40px 0;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+section:first-of-type {
+  border-top: none;
+}
+
+section h2 {
+  font-size: 28px;
+  font-weight: 200;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+/* Quick Start Section */
+.quick-start-section {
+  background: #0a0a0a;
+}
+
+.quick-start-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 40px;
+}
+
+.quick-start-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.quick-start-header h3 {
+  font-size: 24px;
+  font-weight: 300;
+  color: #ff1493;
+  margin: 0;
+}
+
+.code-block {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 20, 147, 0.2);
+  border-radius: 8px;
+  padding: 24px;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  font-size: 14px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.code-comment {
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 8px;
+}
+
+.code-line {
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.code-line:last-child {
+  margin-bottom: 0;
+}
+
+.inline-code {
+  background: rgba(255, 20, 147, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  font-size: 13px;
+  color: #ff1493;
+}
+
+/* Documentation Sections Grid */
+.docs-sections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.docs-section-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.docs-section-card:hover {
+  border-color: rgba(255, 20, 147, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.docs-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.docs-section-header h3 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #ff1493;
+  margin: 0;
+}
+
+.docs-section-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.docs-section-item {
+  margin-bottom: 12px;
+}
+
+.docs-section-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  font-size: 15px;
+}
+
+.docs-section-link:hover {
+  background: rgba(255, 20, 147, 0.1);
+  color: #ff1493;
+}
+
+/* External Resources */
+.external-resources-section {
+  background: #0a0a0a;
+}
+
+.external-resources-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.external-resources-header h2 {
+  margin: 0;
+}
+
+.external-resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.external-resource-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.external-resource-card:hover {
+  border-color: rgba(255, 20, 147, 0.4);
+  background: rgba(255, 20, 147, 0.05);
+  transform: translateY(-2px);
+}
+
+.external-resource-icon {
+  color: #ff1493;
+  flex-shrink: 0;
+}
+
+.external-resource-content h4 {
+  font-weight: 500;
+  margin: 0 0 6px 0;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.external-resource-content p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Typography Refinements */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  letter-spacing: -0.5px;
+}
+
+p {
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive - Mobile Compact */
+@media (max-width: 768px) {
+  .docs-page {
+    padding-top: 120px;
+  }
+
+  .docs-container {
+    padding: 0 20px;
+  }
+
+  .docs-hero h1 {
+    font-size: 32px;
+  }
+  
+  .docs-tagline {
+    font-size: 14px;
+  }
+  
+  section h2 {
+    font-size: 24px;
+  }
+  
+  .docs-sections-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .external-resources-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-start-card {
+    padding: 20px;
+  }
+
+  .code-block {
+    padding: 16px;
+    font-size: 13px;
+  }
+
+  .docs-section-card {
+    padding: 20px;
+  }
+}

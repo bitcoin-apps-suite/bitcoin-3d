@@ -36,8 +36,11 @@ const ContractsPage: React.FC = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [activeTab, setActiveTab] = useState<'3d-modeling' | 'animation' | 'rendering'>('3d-modeling');
   const [devSidebarCollapsed, setDevSidebarCollapsed] = useState(() => {
-    const saved = localStorage.getItem('devSidebarCollapsed');
-    return saved === 'true';
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('devSidebarCollapsed');
+      return saved === 'true';
+    }
+    return false;
   });
   const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth <= 768 : false);
   
