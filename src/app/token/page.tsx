@@ -252,23 +252,58 @@ const TokenPage: React.FC = () => {
             <div className="stats-grid">
               <div className="stat">
                 <h3>Total Supply</h3>
-                <p className="stat-value">100,000,000</p>
+                <p className="stat-value">1,000,000,000</p>
                 <p className="stat-label">$B3D tokens</p>
               </div>
               <div className="stat">
-                <h3>Distributed</h3>
-                <p className="stat-value">0</p>
-                <p className="stat-label">Tokens allocated</p>
+                <h3>Development Bounties</h3>
+                <p className="stat-value">100,000,000</p>
+                <p className="stat-label">Tokens allocated (10%)</p>
               </div>
               <div className="stat">
-                <h3>Contributors</h3>
-                <p className="stat-value">1</p>
-                <p className="stat-label">Active creators</p>
+                <h3>Available Contracts</h3>
+                <p className="stat-value">19</p>
+                <p className="stat-label">Active bounties</p>
               </div>
               <div className="stat">
                 <h3>Network</h3>
                 <p className="stat-value">BSV</p>
                 <p className="stat-label">Blockchain</p>
+              </div>
+            </div>
+            
+            <div className="development-allocation">
+              <h3>Development Token Allocation</h3>
+              <p>
+                100 million $B3D tokens (10% of total supply) have been allocated as bounties for building 
+                the complete Bitcoin 3D platform. These tokens are distributed across 19 GitHub issues 
+                covering core 3D engine, blockchain integration, collaboration features, and marketplace development.
+              </p>
+              <div className="allocation-breakdown">
+                <div className="phase">
+                  <span>Phase 1: Core 3D Engine & Blockchain Foundation</span>
+                  <span>25,000,000 $B3D</span>
+                </div>
+                <div className="phase">
+                  <span>Phase 2: Advanced 3D Modeling Tools</span>
+                  <span>20,000,000 $B3D</span>
+                </div>
+                <div className="phase">
+                  <span>Phase 3: Collaboration & Multi-User Features</span>
+                  <span>15,000,000 $B3D</span>
+                </div>
+                <div className="phase">
+                  <span>Phase 4: Blockchain Asset Management</span>
+                  <span>20,000,000 $B3D</span>
+                </div>
+                <div className="phase">
+                  <span>Phase 5: Advanced Features & Marketplace</span>
+                  <span>15,000,000 $B3D</span>
+                </div>
+                <div className="phase">
+                  <span>Phase 6: Performance & Enterprise Features</span>
+                  <span>5,000,000 $B3D</span>
+                </div>
               </div>
             </div>
           </section>
@@ -342,13 +377,26 @@ const TokenPage: React.FC = () => {
 
           {/* CTA Section */}
           <section className="cta-section">
-            <h2>Ready to Create the Future?</h2>
+            <h2>Ready to Build & Earn?</h2>
+            <p style={{textAlign: 'center', marginBottom: '32px', color: 'rgba(255, 255, 255, 0.8)'}}>
+              Start earning $B3D tokens by building the Bitcoin 3D platform. 
+              100 million tokens available across 19 development contracts.
+            </p>
             <div className="cta-buttons">
+              <a 
+                href="/contracts" 
+                className="cta-btn primary"
+              >
+                <svg height="20" width="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                View $B3D Bounties
+              </a>
               <a 
                 href="https://github.com/bitcoin-apps-suite/bitcoin-3d" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="cta-btn primary"
+                className="cta-btn secondary"
               >
                 <svg height="20" width="20" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
@@ -359,7 +407,7 @@ const TokenPage: React.FC = () => {
                 href="/docs" 
                 className="cta-btn secondary"
               >
-                Read Creator Docs
+                Read Docs
               </a>
             </div>
           </section>

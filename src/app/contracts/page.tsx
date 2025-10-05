@@ -117,11 +117,16 @@ const ContractsPage: React.FC = () => {
       const mappedContracts: Contract[] = issues.map((issue: any) => {
         const body = issue.body || '';
         
-        // Handle both old and new format
+        // Handle both old and new format - updated for new GitHub issue format
         let priorityMatch = body.match(/\*\*Priority:\*\*\s*(Critical|High|Medium|Low)/i);
-        let hoursMatch = body.match(/\*\*Estimated Hours:\*\*\s*([\d,]+)/i);
-        let rewardMatch = body.match(/\*\*Token Reward:\*\*\s*([\d,]+)\s*B3D/i);
+        let hoursMatch = body.match(/\*\*Estimated (?:Hours|Effort):\*\*\s*([\d,]+)/i);
+        let rewardMatch = body.match(/\*\*Reward:\*\*\s*([\d,]+)\s*\$?B3D/i);
         let categoryMatch = body.match(/\*\*Category:\*\*\s*([^\n]+)/i);
+        
+        // Also check for the format at the top of issues: **Reward: 8,000,000 $B3D**
+        if (!rewardMatch) {
+          rewardMatch = body.match(/Reward:\s*([\d,]+)\s*\$?B3D/i);
+        }
         
         // Find matching PR if exists
         const matchingPR = pullRequests.find((pr: any) => 
@@ -198,17 +203,22 @@ const ContractsPage: React.FC = () => {
         if (titleLower.includes('animation') || titleLower.includes('animate') || 
             titleLower.includes('rigging') || titleLower.includes('keyframe') ||
             titleLower.includes('motion') || titleLower.includes('sequence') ||
+            titleLower.includes('timeline') ||
             bodyLower.includes('animation') || bodyLower.includes('character rigging') ||
-            bodyLower.includes('motion graphics') || bodyLower.includes('keyframe animation')) {
+            bodyLower.includes('motion graphics') || bodyLower.includes('keyframe animation') ||
+            bodyLower.includes('timeline editor') || bodyLower.includes('animationmixer')) {
           category = 'animation';
         }
         
         // Check for rendering-related keywords
         if (titleLower.includes('render') || titleLower.includes('lighting') || 
             titleLower.includes('material') || titleLower.includes('shader') ||
-            titleLower.includes('texture') || titleLower.includes('lighting') ||
+            titleLower.includes('texture') || titleLower.includes('pbr') ||
+            titleLower.includes('optimization') || titleLower.includes('performance') ||
             bodyLower.includes('rendering') || bodyLower.includes('post-processing') ||
-            bodyLower.includes('lighting setup') || bodyLower.includes('material creation')) {
+            bodyLower.includes('lighting setup') || bodyLower.includes('material creation') ||
+            bodyLower.includes('pbr material') || bodyLower.includes('physically based rendering') ||
+            bodyLower.includes('performance optimization') || bodyLower.includes('lod system')) {
           category = 'rendering';
         }
         
@@ -237,7 +247,7 @@ const ContractsPage: React.FC = () => {
           githubIssueUrl: issue.html_url,
           title: issue.title,
           description: description,
-          reward: rewardMatch ? `${rewardMatch[1]} B3D` : '2,000 B3D',
+          reward: rewardMatch ? `${rewardMatch[1]} $B3D` : '1,000,000 $B3D',
           estimatedHours: hoursMatch ? parseInt(hoursMatch[1].replace(/,/g, '')) : 8,
           priority: (priorityMatch ? priorityMatch[1] : 'Medium') as Contract['priority'],
           category: category,
