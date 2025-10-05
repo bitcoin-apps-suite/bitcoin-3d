@@ -3,7 +3,7 @@
   "/api/auth/[...nextauth]/route": "/api/auth/[...nextauth]",
   "/exchange/page": "/exchange",
   "/contracts/page": "/contracts",
+  "/token/page": "/token",
   "/docs/page": "/docs",
-  "/page": "/",
-  "/token/page": "/token"
+  "/page": "/"
 }
