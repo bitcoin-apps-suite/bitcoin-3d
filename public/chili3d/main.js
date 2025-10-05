@@ -42,5 +42,5 @@
         transform: translate(-50%, -50%);
         width: 50px;
         height: 50px;
-        `,this.appendChild(e)}};customElements.define("chili-loading",Loading);let r=new Loading;document.body.appendChild(r),new AppBuilder().useIndexedDB().useWasmOcc().useThree().useUI().build().then(e=>{document.body.removeChild(r)}).catch(e=>{t.Yd.error(e)})})()})();
+        `,this.appendChild(e)}};customElements.define("chili-loading",Loading);let r=new Loading;document.body.appendChild(r),new AppBuilder().useIndexedDB().useWasmOcc().useThree().useUI().build().then(e=>{document.body.removeChild(r),e.newDocument("Bitcoin 3D Project")}).catch(e=>{t.Yd.error(e)})})()})();
 //# sourceMappingURL=main.js.map
