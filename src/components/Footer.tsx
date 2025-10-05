@@ -18,8 +18,8 @@ const Footer: React.FC = () => {
         padding: '0 20px'
       }}>
         <div style={{ marginBottom: '1rem' }}>
-          <p>© 2025 Your Company Name</p>
-          <p>Bitcoin SV Application Template</p>
+          <p>© 2025 Bitcoin 3D</p>
+          <p>Professional 3D Modeling & Design</p>
         </div>
         
         <div style={{ 

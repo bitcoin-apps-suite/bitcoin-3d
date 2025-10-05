@@ -40,16 +40,16 @@ export default function Taskbar() {
         { divider: true },
         { label: 'About Bitcoin 3D', action: () => alert(
           'Bitcoin 3D v1.0.0\n\n' +
-          'Bitcoin SV Application Template\n\n' +
-          '© 2025 Your Company Name\n\n' +
+          'Professional 3D Modeling & Design\n\n' +
+          '© 2025 Bitcoin 3D\n\n' +
           'Built with:\n' +
+          '• CHILI3D WebAssembly Engine\n' +
+          '• Three.js Rendering\n' +
+          '• OpenCascade Technology\n' +
           '• Next.js 15.5\n' +
-          '• Bitcoin SV (BSV) Blockchain\n' +
-          '• HandCash Connect Integration\n' +
-          '• Exchange Framework\n' +
-          '• Smart Contracts\n\n' +
+          '• Bitcoin SV (BSV) Blockchain\n\n' +
           'License: Open BSV License Version 5\n\n' +
-          'Customize this boilerplate for your Bitcoin app!'
+          'Create, design, and model in 3D with Bitcoin 3D!'
         ) },
         { divider: true },
         { label: 'Preferences...', shortcut: '⌘,', action: () => console.log('Preferences') },
