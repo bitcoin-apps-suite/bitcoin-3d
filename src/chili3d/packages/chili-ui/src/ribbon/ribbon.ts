@@ -123,8 +123,8 @@ export class Ribbon extends HTMLElement {
             { className: style.left },
             div(
                 { className: style.appIcon, onclick: () => PubSub.default.pub("displayHome", true) },
-                svg({ className: style.icon, icon: "icon-chili" }),
-                span({ id: "appName", textContent: `Chili3D - v${__APP_VERSION__}` }),
+                svg({ className: style.icon, icon: "icon-toSolid", style: { color: "#ff69b4" } }),
+                span({ id: "appName", textContent: `Bitcoin 3D - v${__APP_VERSION__}` }),
             ),
             div(
                 { className: style.ribbonTitlePanel },
