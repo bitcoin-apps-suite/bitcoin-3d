@@ -6,6 +6,9 @@ import DevLayout from "@/components/DevLayout";
 import Footer from "@/components/Footer";
 import BitcoinOSWrapper from "@/components/BitcoinOSWrapper";
 
+import '../mobile/mobile-bwallet.css';
+import MobileShellInit from '../mobile/MobileShellInit';
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -63,6 +66,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <MobileShellInit />
         <BitcoinOSWrapper>
           <DevLayout>
             <div style={{ minHeight: 'calc(100vh - 32px)', display: 'flex', flexDirection: 'column' }}>
