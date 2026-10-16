@@ -42,37 +42,13 @@ const ExchangePage: React.FC = () => {
     }
   }, []);
 
-  // Mock trading data
-  const tradingPairs = [
-    { pair: 'B3D/BSV', price: '0.00145', change: '+12.4%', volume: '2.4M', high24h: '0.00152', low24h: '0.00138' },
-    { pair: 'B3D/USD', price: '$0.067', change: '+8.2%', volume: '1.8M', high24h: '$0.071', low24h: '$0.062' },
-    { pair: 'BSV/USD', price: '$46.32', change: '+2.1%', volume: '845K', high24h: '$47.10', low24h: '$45.20' },
-  ];
-
-  const recentTrades = [
-    { time: '14:52:18', pair: 'B3D/BSV', side: 'BUY', amount: '25,000', price: '0.00145', total: '36.25 BSV' },
-    { time: '14:52:01', pair: 'B3D/USD', side: 'SELL', amount: '18,500', price: '$0.067', total: '$1,239.50' },
-    { time: '14:51:45', pair: 'B3D/BSV', side: 'BUY', amount: '50,000', price: '0.00144', total: '72.00 BSV' },
-    { time: '14:51:32', pair: 'BSV/USD', side: 'BUY', amount: '12.5', price: '$46.30', total: '$578.75' },
-    { time: '14:51:18', pair: 'B3D/USD', side: 'BUY', amount: '75,000', price: '$0.066', total: '$4,950.00' },
-  ];
-
-  const orderBook = {
-    bids: [
-      { price: '0.00144', amount: '125,000', total: '180.00' },
-      { price: '0.00143', amount: '89,500', total: '127.99' },
-      { price: '0.00142', amount: '156,200', total: '221.80' },
-      { price: '0.00141', amount: '203,400', total: '286.79' },
-      { price: '0.00140', amount: '95,800', total: '134.12' },
-    ],
-    asks: [
-      { price: '0.00145', amount: '98,600', total: '142.97' },
-      { price: '0.00146', amount: '112,300', total: '163.96' },
-      { price: '0.00147', amount: '87,400', total: '128.48' },
-      { price: '0.00148', amount: '145,200', total: '214.90' },
-      { price: '0.00149', amount: '76,800', total: '114.43' },
-    ]
-  };
+  // No $B3D market exists yet: show honest empty states, never invented prices or trades.
+  type Pair = { pair: string; price: string; change: string; volume: string; high24h: string; low24h: string };
+  type Trade = { time: string; pair: string; side: string; amount: string; price: string; total: string };
+  type Level = { price: string; amount: string; total: string };
+  const tradingPairs: Pair[] = [];
+  const recentTrades: Trade[] = [];
+  const orderBook: { bids: Level[]; asks: Level[] } = { bids: [], asks: [] };
 
   return (
     <div className="App">
@@ -93,22 +69,22 @@ const ExchangePage: React.FC = () => {
             <div className="stats-grid">
               <div className="stat">
                 <h3>24h Volume</h3>
-                <p className="stat-value">$2.47M</p>
+                <p className="stat-value">—</p>
                 <p className="stat-label">Total trading volume</p>
               </div>
               <div className="stat">
                 <h3>Active Pairs</h3>
-                <p className="stat-value">3</p>
+                <p className="stat-value">0</p>
                 <p className="stat-label">Trading markets</p>
               </div>
               <div className="stat">
                 <h3>B3D Price</h3>
-                <p className="stat-value">$0.067</p>
-                <p className="stat-label">24h +8.2%</p>
+                <p className="stat-value">—</p>
+                <p className="stat-label">Not trading yet</p>
               </div>
               <div className="stat">
                 <h3>Market Cap</h3>
-                <p className="stat-value">$6.7M</p>
+                <p className="stat-value">—</p>
                 <p className="stat-label">Circulating supply</p>
               </div>
             </div>
@@ -127,6 +103,7 @@ const ExchangePage: React.FC = () => {
                 <div className="col volume">24h Volume</div>
                 <div className="col action">Action</div>
               </div>
+              {tradingPairs.length === 0 && <div className="table-row"><div className="col pair">No markets yet. $B3D is not trading.</div></div>}
               {tradingPairs.map((pair, index) => (
                 <div key={index} className="table-row">
                   <div className="col pair">

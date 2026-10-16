@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
+import WalletButton from './WalletButton'
+import { signIn, useWalletUser } from '@/lib/wallet'
 import { Menu, X } from 'lucide-react'
 
 interface DropdownItem {
@@ -18,7 +20,7 @@ interface DropdownMenu {
 }
 
 export default function Taskbar() {
-  const session = null // Removed NextAuth for now
+  const user = useWalletUser()
   const [activeMenu, setActiveMenu] = useState<string | null>(null)
   const [showBitcoinSuite, setShowBitcoinSuite] = useState(false)
   const [showMobileMenu, setShowMobileMenu] = useState(false)
@@ -54,7 +56,7 @@ export default function Taskbar() {
         { divider: true },
         { label: 'Preferences...', shortcut: '⌘,', action: () => console.log('Preferences') },
         { divider: true },
-        { label: 'Sign In', shortcut: '⌘Q', action: () => console.log('Sign in clicked') }
+        { label: 'Sign in with bWalletX', action: () => { signIn().catch(() => alert('No BRC-100 wallet found. Open Bitcoin 3D in bWalletX.')) } }
       ]
     },
     {
@@ -577,17 +579,7 @@ export default function Taskbar() {
         >
           $TOKEN
         </button>
-        {session ? (
-          <>
-            <span>{session.user?.email || 'Connected'}</span>
-            <span style={{ color: '#00ff88' }}>●</span>
-          </>
-        ) : (
-          <>
-            <span>Not Connected</span>
-            <span style={{ color: '#ff4444', opacity: 0.6 }}>●</span>
-          </>
-        )}
+        <WalletButton />
       </div>
 
       {/* Mobile Menu Overlay */}
@@ -617,15 +609,14 @@ export default function Taskbar() {
               alignItems: 'center',
               justifyContent: 'space-between'
             }}>
-              {session ? (
+              {user ? (
                 <>
-                  <span style={{ color: '#ffffff', fontSize: '14px' }}>{session.user?.email || 'Connected'}</span>
+                  <span style={{ color: '#ffffff', fontSize: '14px' }}>{user.displayName}</span>
                   <span style={{ color: '#00ff88' }}>●</span>
                 </>
               ) : (
                 <>
-                  <span style={{ color: '#ffffff', fontSize: '14px' }}>Not Connected</span>
-                  <span style={{ color: '#ff4444', opacity: 0.6 }}>●</span>
+                  <WalletButton />
                 </>
               )}
             </div>

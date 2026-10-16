@@ -166,7 +166,7 @@ const DocsPage: React.FC = () => {
               </a>
 
               <a 
-                href="https://docs.handcash.io" 
+                href="https://bwalletx.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="external-resource-card"
@@ -175,8 +175,8 @@ const DocsPage: React.FC = () => {
                   <ExternalLink size={20} />
                 </div>
                 <div className="external-resource-content">
-                  <h4>HandCash Connect</h4>
-                  <p>Integrate wallet functionality and payments</p>
+                  <h4>bWalletX (BRC-100)</h4>
+                  <p>Sign in and pay with any BRC-100 wallet</p>
                 </div>
               </a>
 
