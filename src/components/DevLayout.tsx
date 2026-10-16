@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import DevSidebar from './DevSidebar';
 import Taskbar from './Taskbar';
+import WalletButton from './WalletButton';
 import { useBitcoinOS } from '@/lib/utils/useBitcoinOS';
 
 interface DevLayoutProps {
@@ -33,6 +34,7 @@ const DevLayout: React.FC<DevLayoutProps> = ({ children }) => {
   return (
     <>
       {!isInOS && <Taskbar />}
+      {isInOS && <WalletButton floating />}
       {!isInOS && <DevSidebar onCollapsedChange={handleCollapsedChange} />}
       <div className={`app-container ${isInOS ? '' : (isCollapsed ? 'with-dev-sidebar-collapsed' : 'with-dev-sidebar')}`}>
         {children}
